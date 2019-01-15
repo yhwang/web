@@ -1,3 +1,509 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+$bg: #0f253a;
+$highlight: #fcc802;
+
+h1, h2, h3, h4, h5, h6, span, p, a, ul, li, div, em, b {
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+#landing {
+	background: $bg;
+
+	h1 {
+		font-size: 6em;
+		line-height: 1.15em;
+		margin: 0 0 1.5rem;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 3em;
+		line-height: 1.25em;
+		margin: 0 0 1.5rem;
+		font-family: 'Prata',serif;
+	}
+
+	h3 {
+		font-size: 1.95em;
+		line-height: 1.5em;
+		margin: 0 0 1.5rem;
+		font-weight: 300;
+	}
+
+	h4 {
+		text-align: center;
+		display: block;
+		margin: 2rem 0 2rem;
+		padding: .75em 0;
+		border-top: 1px solid rgba(255,255,255,.25);
+		border-bottom: 1px solid rgba(255,255,255,.25);
+	}
+
+	p {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		font-weight: 300;
+		margin: 0 0 1.5rem;
+	}
+
+	.banner {
+		padding: 10vh 0 40vh;
+		color: #fff;
+		position: relative;
+		border-bottom: 3px solid #0a1723;
+		top: 0;
+		background: #000;
+		box-shadow: 0 0 25px rgba(0,0,0,.5);
+		/*background: url('/assets/index_banner.jpg');
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;*/
+
+		h1 {
+			position: relative;
+			z-index: 5;
+			font-weight: 700;
+			letter-spacing: 1px;
+			font-family: 'Prata', serif;
+
+			span {
+				font-weight: 300;
+				display: inline-block;
+				font-size: .75em;
+			}
+
+			img.icon {
+				display: inline-block;
+				vertical-align: unset;
+				height: .85em;
+				margin-left: .4em;
+			}
+		}
+
+		h2 {
+			position: relative;
+			z-index: 5;
+		}
+
+		h3 {
+			position: relative;
+			z-index: 5;
+			margin: 0 0 4rem;
+		}
+
+		h4 {
+			opacity: .75;
+		}
+
+		.background {
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		a.link {
+			display: inline-block;
+			vertical-align: top;
+			cursor: pointer;
+			padding: .35em 1.5em;
+			font-size: 1.25em;
+			line-height: 1.5em;
+			text-decoration: none;
+			border: 2px solid #fff;
+			min-width: 10em;
+			text-align: center;
+			margin: 0 .5em 2.5rem;
+			color: #fff;
+			font-weight: 400;
+			transition: all .1s;
+			-ms-transition: all .1s;
+			-moz-transition: all .1s;
+			-webkit-transition: all .1s;
+
+			i,svg {
+				display: inline-block;
+				vertical-align: baseline;
+				margin-right: .5em;
+			}
+		}
+
+		a.link:hover {
+			background: #fff;
+			color: #111;
+		}
+
+		p {
+			position: relative;
+			z-index: 5;
+		}
+
+		.intro {
+			text-align: center;
+		}
+
+		.content {
+			position: relative;
+			top: 0;
+			opacity: 1;
+			z-index: 100;
+			min-height: 25em;
+		}
+
+		iframe {
+			position: relative;
+			z-index: 5;
+			border: 6px solid rgba(0,0,0,.75);
+		}
+
+		img.bg {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			display: block;
+			z-index: 1;
+		}
+	}
+
+	.section {
+		padding: 6em 0 4em;
+		color: #fff;
+		position: relative;
+
+		img {
+
+		}
+
+		img.block {
+			position: relative;
+			display: block;
+			width: 100%;
+			border: 1px solid rgba(255,255,255,.15);
+		}
+
+		img.chart {
+			position: relative;
+			display: block;
+			width: 100%;
+			margin: 0 0 1.5rem;
+		}
+
+		h2 {
+			font-size: 2.25em;
+			font-weight: 400;
+			font-family: 'Prata',serif;
+
+			b {
+				font-family: 'Prata', serif;
+			}
+		}
+
+		a {
+			opacity: .75;
+			font-size: 1.5em;
+			line-height: 1.5em;
+			font-weight: 600;
+			display: inline-block;
+			padding: .5em 1em;
+			background: transparent;
+			border: 1px solid rgba(255,255,255,.5);
+			margin: 0 0 1.5rem;
+			color: #fff;
+			text-decoration: none;
+			transition: all .15s;
+			-ms-transition: all .15s;
+			-moz-transition: all .15s;
+			-webkit-transition: all .15s;
+
+			i,svg {
+				color: #fff;
+				display: inline-block;
+				margin-left: .25em;
+				vertical-align: middle;
+				transition: all .15s;
+				-ms-transition: all .15s;
+				-moz-transition: all .15s;
+				-webkit-transition: all .15s;
+			}
+		}
+
+		a:hover {
+			opacity: 1;
+			background: #fff;
+			color: $bg;
+
+			i,svg {
+				color: $bg;
+				margin-left: .75em;
+			}
+		}
+
+		img.gif {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.section.problem {
+		text-align: center;
+
+		h2 {
+			 font-weight: 400;
+			 letter-spacing: 4px;
+			 margin-bottom: 3rem;
+			 opacity: .75;
+		}
+
+		.challenge {
+			padding-bottom: 3em;
+			margin-bottom: 4em;
+			border-bottom: 1px solid rgba(255,255,255,.2);
+		}
+
+		.solution {
+
+			span {
+				font-size: 2em;
+				font-weight: 700;
+				line-height: 1.25em;
+				margin-bottom: 0;
+				display: block;
+			}
+
+			h3 {
+				margin-bottom: 0rem;
+			}
+
+			img.icon {
+				display: inline-block;
+				vertical-align: middle;
+				height: 1.25em;
+				margin-right: .2em;
+			}
+		}
+	}
+
+	.section.background {
+		background: rgba(255,255,255,.075);
+
+		.content {
+			padding-top: 2em;
+			padding-bottom: 1em;
+
+			h2 {
+				opacity: 1;
+			}
+
+			img.icon {
+				display: inline-block;
+				vertical-align: unset;
+				height: 1em;
+				margin-left: .25em;
+			}
+
+			p {
+				opacity: 1;
+			}
+		}
+	}
+
+	.section.management {
+		padding-bottom: 8em;
+
+		.content {
+			padding-top: 3em;
+		}
+	}
+
+	.section.hardware {
+
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		.content {
+			padding-top: 0em;
+		}
+	}
+
+	.section.open {
+		background: rgba(255,255,255,.075);
+
+		img.block {
+			border: 0;
+			max-height: 20em;
+			max-width: 100%;
+			width: auto;
+		}
+
+		.content {
+			padding-top: 0em;
+		}
+	}
+
+	.section.appstore {
+		background: rgba(255,255,255,.075);
+		padding-bottom: 6em;
+
+		.content {
+			padding-top: 1.5em;
+		}
+
+		img.block {
+			border: 0;
+		}
+	}
+
+	.section.contribute {
+
+		.content {
+			text-align: center;
+
+			a {
+				display: inline-block;
+				font-size: inherit;
+				padding: 0;
+				border: 0;
+				background: transparent;
+				text-decoration: underline;
+				margin: 0;
+				color: #fff;
+				opacity: 1;
+				font-weight: 300;
+			}
+
+			a:hover {
+				opacity: .7;
+				color: #fff;
+			}
+		}
+	}
+
+	.section.quackpack {
+
+		.content {
+			padding-top: 3em;
+		}
+	}
+
+	.section.access {
+		padding-bottom: 0em;
+	}
+
+	.section.conversational {
+
+
+	}
+
+	.section.channels {
+
+
+	}
+
+	.section.civilians {
+		background: rgba(255,255,255,.075);
+
+		img.block {
+
+		}
+
+		.content {
+			padding-top: 0;
+		}
+	}
+
+	.section.duckintro {
+
+		.content {
+			padding-top: 3em;
+			padding-bottom: 2em;
+		}
+
+		img.block {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.section.charts {
+
+		h4 {
+			margin-top: 2em;
+			border-top: 0;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			opacity: .7;
+			font-size: 1em;
+		}
+
+		img.chart.mamarange {
+			margin-top: 4em;
+		}
+	}
+
+	.section.analytics {
+		background: url('/assets/owl_civiliandata.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: left center;
+		border-top: 4px solid rgba(0,0,0,.5);
+		border-bottom: 4px solid rgba(0,0,0,.5);
+	}
+}
+
+#landing.landing {
+
+	.banner {
+		padding: 25vh 0 35vh;
+	}
+
+	.section {
+		padding: 8em 0;
+	}
+}
+
+#landing.opensource {
+
+	.banner {
+		padding: 15vh 0 15vh;
+		background: #111;
+
+		h1 {
+			margin: 0;
+		}
+	}
+}
+
+#landing.owldetails {
+
+	.banner {
+		padding: 15vh 0 15vh;
+		background: #111;
+
+		h1 {
+			margin: 0;
+		}
+	}
+}
+
+#landing.clusterduck {
+
+	.banner {
+		padding: 15vh 0 15vh;
+		background: #111;
+
+		h1 {
+			margin: 0;
+		}
+	}
+}

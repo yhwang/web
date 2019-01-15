@@ -1,0 +1,279 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+
+
+
+.button {
+	display: inline-block;
+	padding: .5em 1.5em;
+	font-size: 1em;
+	line-height: 1.15em;
+	color: #333;
+	background: #f1f1f1;
+	border: 2px solid #ccc;
+}
+
+header#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	background: rgba(0,0,0,.2);
+	z-index: 500;
+
+	a.logo {
+		padding: 0;
+		display: inline-block;
+		padding: 0rem 0;
+		font-size: 1em;
+		vertical-align: top;
+	}
+
+	img {
+		display: block;
+		max-height: 2.5rem;
+		margin-top: 0;
+	}
+
+	.status-bar {
+		display: block;
+		padding: 1rem 0 1rem;
+
+		.user-incident {
+			display: inline-block;
+			font-size: .85em;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin: 0 2em 0 0;
+			line-height: 1.5em;
+			background: #d88c00;
+			padding: .15em .5em;
+			border: 2px solid #d88c00;
+			overflow: hidden;
+			width: auto;
+			height: auto;
+			transition: all .25s;
+			-ms-transition: all .25s;
+			-webkit-transition: all .25s;
+			-moz-transition: all .25s;
+		}
+
+		.user-incident.out {
+			opacity: 0;
+			width: 0;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+
+		p {
+			margin: 0;
+			vertical-align: top;
+			line-height: 1.75em;
+			display: inline-block;
+		}
+
+		h3 {
+			font-size: 1.25em;
+			margin: 0;
+			line-height: 3.5rem;
+			color: rgba(255,255,255,.85);
+			font-weight: 300;
+			text-transform: uppercase;
+			font-style: italic;
+			letter-spacing: 2px;
+		}
+
+		.status-info {
+			color: #fff;
+		}
+	}
+
+	a.logo:hover {
+		background: transparent;
+	}
+
+	a:hover {
+		background: transparent;
+	}
+
+	a {
+		display: inline-block;
+		font-size: 1.25em;
+		color: rgba(255,255,255,1);
+		padding: 0 1em;
+		line-height: 7rem;
+		text-decoration: none;
+		background: rgba(0,0,0,0);
+		transition: all .15s;
+		-ms-transition: all .15s;
+		-webkit-transition: all .15s;
+		-moz-transition: all .15s;
+	}
+
+	a.home {
+		padding-left: 0;
+	}
+
+	a:hover {
+		background: #ddd;	
+	}
+
+	a.home:hover {
+		background: transparent;
+	}
+
+	.links {
+		display: inline-block;
+		text-align: right;
+		float: right;
+		vertical-align: top;
+
+		a {
+			position: relative;
+		}
+
+		svg {
+			font-size: 1em;
+		}
+
+		.messages {
+
+		}
+
+		.messages.unread {
+
+			span {
+				display: inline-block;
+				font-size: .65em;
+				width: 1.5em;
+				height: 1.5em;
+				line-height: 1.5em;
+				text-align: center;
+				border-radius: .75em;
+				background: red;
+				color: #fff;
+				position: absolute;
+				top: 1em;
+				right: .5em;
+			}
+		}
+	}
+}
+
+
+header#header.landingheader {
+	background: rgba(0,0,0,.75);
+
+	a {
+		cursor: pointer;
+	}
+
+	h1 {
+	}
+
+	a.home {
+		font-family: "Prata", serif;
+		letter-spacing: 1px;
+		cursor: pointer;
+		font-size: 2.25em;
+
+		img {
+			display: inline-block;
+			height: 2.85rem;
+			max-height: 2.85rem;
+			vertical-align: unset;
+			margin: 0 0 0 .25em;
+		}
+	}
+
+	a:hover  {
+		background: rgba(255,255,255,.1);
+	}
+
+	a.home:hover {
+		background: transparent;
+	}
+
+	.links {
+		float: right;
+	}
+}
+
+
+.data-response {
+	display: none;
+}
+
+
+
+footer#footer {
+	margin-top: 8em;
+	padding-bottom: 12em;
+
+	.content {
+		padding-top: 1em;
+		text-align: center;
+		border-top: 1px solid rgba(255,255,255,.25);
+
+		a {
+			display: inline-block;
+			padding: .5em 1em;
+			font-size: 1em;
+			text-decoration: none;
+			background: transparent;
+			color: #fff;
+			font-weight: 400;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+
+	header#header {
+
+		a.logo {
+			line-height: 5rem;
+
+			img {
+				max-height: 3rem;
+			}
+		}
+
+		a {
+			font-size: .85em;
+			line-height: 5rem;
+		}
+	}
+
+	header#header.landingheader {
+
+
+		a.home {
+			font-size: 2rem;
+
+			img {
+				height: 2rem;
+			}
+		}
+	}
+}
