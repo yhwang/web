@@ -1,0 +1,6 @@
+---
+applications:
+- memory: 256M
+  buildpacks:
+  - ruby_buildpack
+  random-route: true
