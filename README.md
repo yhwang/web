@@ -57,7 +57,7 @@ solution.
 `ClusterDuck` is prototyped over **Arduino, with a WiFi/LoRa solution** and
 levarages IBM's IoT Platform, Node-RED, Cloudant DB, and Cloud Foundry.
 
-Learn more @ [ClusterDuck](https://github.com/Project-OWL/owl/tree/master/Hardware%20-%20ClusterDuck)
+Learn more @ [ClusterDuck](https://github.com/Project-Owl/duck)
 
 
 ## Open Source Software
@@ -90,6 +90,6 @@ as, **temperature**, **water-pressure**, **smoke**, **gas**, and a lot more!
 `QuackPacks` to work with our `Ducks`.
 
 Learn more and contribute to our open source hardware @
-[ClusterDuck + QuackPack](https://github.com/Project-OWL/owl/tree/master/Hardware%20-%20ClusterDuck#quackpack)
+[ClusterDuck + QuackPack](https://github.com/Project-Owl/duck#quackpack)
 
 
